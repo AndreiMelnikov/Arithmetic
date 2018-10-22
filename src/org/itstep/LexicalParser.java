@@ -41,6 +41,8 @@ public final class LexicalParser {
                 return new Token(TokenType.OPEN,expression.subSequence(0,1));
             case ')':
                 return new Token(TokenType.CLOSE,expression.subSequence(0,1));
+            case '^':
+                return new Token(TokenType.CLOSE.POW,expression.subSequence(0,1));
 
 
 

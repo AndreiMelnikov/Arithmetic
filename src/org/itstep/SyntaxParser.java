@@ -65,6 +65,11 @@ public class SyntaxParser {
                 int t = parseTerminal(tokens);
                 return parseMultiplicationRec(prev/t,tokens);
             }
+            case POW:{
+                tokens.poll();
+                int t =  parseTerminal(tokens);
+                return (int) Math.pow(prev,t);
+            }
 
             default:
                 return prev;
